@@ -16,3 +16,17 @@ JOIN city ON address.city_id = city.city_id JOIN customer ON store.store_id = cu
 
 ![image](https://github.com/Byzgaev-I/SQL.Part-2/blob/main/2-1.png)
 
+---
+
+### Задание 2
+
+Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
+
+### Решение:
+
+```
+SELECT COUNT(*) AS film_count FROM film WHERE length > (SELECT AVG(length) FROM film);
+```
+
+![image](https://github.com/Byzgaev-I/SQL.Part-2/blob/main/2-2.png)
+
